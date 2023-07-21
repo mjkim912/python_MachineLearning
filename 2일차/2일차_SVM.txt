@@ -1,0 +1,21 @@
+import pandas as pd
+from sklearn.datasets import load_boston
+
+dataset=load_boston
+
+from sklearn import svm
+
+clf=svm.SVC()
+
+clf.fit(train_data, train_label)
+
+predict=clf.predict(test_data)
+
+print('예측결과 :', predict)
+score=accuracy_score(test_label, predict)
+
+print('정확도 :', score)
+
+# 보고서 출력
+report=metrics.classification_report(test_label, predict)
+print(report)
