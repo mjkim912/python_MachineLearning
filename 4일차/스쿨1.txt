@@ -1,0 +1,17 @@
+# 원핫인코딩(더미 변수)
+from sklearn import preprocessing    
+
+label_encoder = preprocessing.LabelEncoder()     # 범주형데이터를 수치형데이터로
+onehot_encoder = preprocessing.OneHotEncoder()   # one hot encoder 생성
+
+onehot_location = label_encoder.fit_transform(df['지역'])
+onehot_code = label_encoder.fit_transform(df['코드'])
+onehot_type = label_encoder.fit_transform(df['유형'])
+onehot_day = label_encoder.fit_transform(df['주야'])
+
+df['location'] = onehot_location
+df['code'] = onehot_code
+df['type'] = onehot_type
+df['day'] = onehot_day
+
+df.head()
