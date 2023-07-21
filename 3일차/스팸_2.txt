@@ -1,0 +1,8 @@
+test_email_list = [
+                {'email title': 'free flight offer', 'spam': True},
+                {'email title': 'hey traveler free flight deal', 'spam': True},
+                {'email title': 'limited free game offer', 'spam': True},
+                {'email title': 'today flight schedule', 'spam': False},
+                {'email title': 'your credit card attached', 'spam': False},
+                {'email title': 'free credit card offer only today', 'spam': False}
+             ]
