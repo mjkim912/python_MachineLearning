@@ -1,0 +1,16 @@
+
+# 테스트셋의 오차
+yVloss = history.history['val_loss']
+
+# 학습셋의 오차
+yLoss = history.history['loss']
+
+xLen = np.arange(len(yLoss))
+
+plt.plot(xLen, yVloss, marker='.', c='red', label='testset_loss')
+plt.plot(xLen, yLoss, marker='.', c='blue', label='trainset_loss')
+plt.legend()
+plt.grid()
+plt.xlabel('epoch')
+plt.ylabel('loss')
+plt.show()
